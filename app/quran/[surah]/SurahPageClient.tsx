@@ -115,7 +115,7 @@ export default function SurahPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-stone-50 text-stone-900 dark:bg-slate-950 dark:text-slate-100">
+      <main className="min-h-screen text-stone-900 dark:text-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
           <p className="text-stone-600 dark:text-slate-400">
             جاري تحميل السورة...
@@ -127,7 +127,7 @@ export default function SurahPage() {
 
   if (!ayahs.length) {
     return (
-      <main className="min-h-screen bg-stone-50 text-stone-900 dark:bg-slate-950 dark:text-slate-100">
+      <main className="min-h-screen text-stone-900 dark:text-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
           <h1 className="text-2xl font-bold text-red-600 dark:text-red-400">
             لم يتم العثور على آيات هذه السورة
@@ -149,7 +149,7 @@ export default function SurahPage() {
   }
 
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900 dark:bg-slate-950 dark:text-slate-100">
+    <main className="min-h-screen text-stone-900 dark:text-slate-100">
       <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
         <div className="mb-8 text-center">
           <Link
