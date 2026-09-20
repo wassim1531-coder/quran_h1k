@@ -1,0 +1,261 @@
+"use client";
+
+import Link from "next/link";
+import ScrollReveal from "../ScrollReveal";
+import ScrollParallax from "../ScrollParallax";
+
+export default function HomePage() {
+  return (
+    <div className="space-y-12 py-6">
+      {/* Hero Section */}
+      <ScrollReveal direction="up" className="text-center space-y-6 max-w-3xl mx-auto">
+      <section className="text-center space-y-6 max-w-3xl mx-auto">
+        <ScrollParallax strength={14}>
+          <div className="flex justify-center mb-4">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-500/30">
+              <img
+                src="/icons/icon.jpg"
+                alt="quran_h1k Icon"
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/icons/icon-512x512.png";
+                }}
+              />
+            </div>
+          </div>
+        </ScrollParallax>
+
+        <h1 className="text-3xl md:text-5xl font-bold text-emerald-400 tracking-wide">
+          موقع وتطبيق quran_h1k
+        </h1>
+
+        <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
+          منصة إسلامية جامعة للقرآن الكريم بالروايات، الأحاديث النبوية الصحيحة،
+          الأذكار اليومية، وعلوم التجويد والحديث.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 pt-2">
+          <Link
+            href="/quran"
+            className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium shadow-lg hover:shadow-emerald-900/40 transition-all duration-200"
+          >
+            قراءة القرآن الكريم
+          </Link>
+
+          <Link
+            href="/hadith"
+            className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 font-medium border border-emerald-500/20 transition-all duration-200"
+          >
+            تصفح كتب الحديث
+          </Link>
+        </div>
+      </section>
+      </ScrollReveal>
+
+      {/* Main Features Grid */}
+      <ScrollReveal direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" delay={100}>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Link
+          href="/quran"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            📖
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            القرآن الكريم
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            تصفح المصحف الشريف برواية ورش عن نافع ورواية حفص عن عاصم مع التحكم
+            في القراءة والتنقل السلس.
+          </p>
+        </Link>
+
+        <Link
+          href="/hadith"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            📜
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            الأحاديث النبوية
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            مكتبة متكاملة تضم كتب الحديث الشريف الرئيسية مثل صحيح البخاري،
+            صحيح مسلم، والسنن.
+          </p>
+        </Link>
+
+        <Link
+          href="/adhkar"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            🤲
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            الأذكار اليومية
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            أذكار الصباح والمساء، أذكار الصلاة، السفر، والنوم موثقة من أمهات
+            الكتب.
+          </p>
+        </Link>
+
+        <Link
+          href="/learn/quran"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            🎓
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            تعليم التجويد
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            دروس مبسطة ومنظمة في أسطار التجويد ومخارج الحروف والصفات والأحكام.
+          </p>
+        </Link>
+
+        <Link
+          href="/recitations"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            🎧
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            التلاوات الصوتية
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            استماع للتلاوات الخاشعة بمختلف الروايات لأشهر القراء في العالم
+            الإسلامي.
+          </p>
+        </Link>
+
+        <Link
+          href="/continue-reading"
+          className="p-6 rounded-2xl bg-slate-900/80 border border-emerald-900/30 hover:border-emerald-500/50 transition-all duration-300 group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4 group-hover:scale-105 transition-transform">
+            📌
+          </div>
+          <h3 className="text-xl font-bold text-slate-100 mb-2">
+            متابعة القراءة
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            استكمل قراءتك من حيث توقفت بسهولة مع حفظ العلامات المرجعية في جهازك.
+          </p>
+        </Link>
+      </section>
+      </ScrollReveal>
+
+      {/* Social Media Section */}
+      <ScrollReveal direction="up" delay={150}>
+      <section className="relative overflow-hidden rounded-[2rem] border border-emerald-500/20 bg-slate-900/70 px-5 py-10 md:px-10 md:py-12 shadow-2xl backdrop-blur-xl">
+        <div className="absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
+
+        <div className="relative text-center mb-10">
+          <p className="text-xs md:text-sm font-semibold tracking-[0.3em] text-emerald-400 uppercase">
+            quran_h1k
+          </p>
+
+          <h2 className="mt-3 text-2xl md:text-4xl font-bold text-white">
+            تابعنا خارج الموقع
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm md:text-base leading-7 text-slate-400">
+            نشارك محتوى إسلاميًا مستمرًا من القرآن الكريم والأحاديث والأذكار
+            والتذكير، عبر حساباتنا الرسمية.
+          </p>
+        </div>
+
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          {/* YouTube */}
+          <a
+            href="https://www.youtube.com/channel/UCRwWaRo2mFROuo2Pca0CVHQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-3xl border border-red-500/20 bg-slate-950/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-950/20"
+          >
+            <div className="flex items-center gap-5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-red-600/10 border border-red-500/20 transition-transform duration-300 group-hover:scale-105">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-8 w-8 fill-red-500"
+                  aria-hidden="true"
+                >
+                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.9V8.1l6.5 3.9-6.5 3.9Z" />
+                </svg>
+              </div>
+
+              <div className="min-w-0 flex-1 text-right">
+                <h3 className="text-xl font-bold text-white">
+                  YouTube
+                </h3>
+                <p className="mt-1 text-sm text-slate-400">
+                  القناة الرسمية لـ quran_h1k
+                </p>
+              </div>
+
+              <span className="text-xl text-slate-600 transition-transform duration-300 group-hover:-translate-x-1 group-hover:text-red-400">
+                ←
+              </span>
+            </div>
+
+            <div className="mt-6 border-t border-white/5 pt-4">
+              <span className="text-sm font-semibold text-red-400">
+                شاهد التلاوات والمحتوى الإسلامي →
+              </span>
+            </div>
+          </a>
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/quran_h1k/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-3xl border border-pink-500/20 bg-slate-950/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/50 hover:shadow-2xl hover:shadow-pink-950/20"
+          >
+            <div className="flex items-center gap-5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-pink-500/10 border border-pink-500/20 transition-transform duration-300 group-hover:scale-105">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-8 w-8 fill-none stroke-pink-400"
+                  strokeWidth="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+
+              <div className="min-w-0 flex-1 text-right">
+                <h3 className="text-xl font-bold text-white">
+                  Instagram
+                </h3>
+                <p className="mt-1 text-sm text-slate-400">
+                  الحساب الرسمي لـ @quran_h1k
+                </p>
+              </div>
+
+              <span className="text-xl text-slate-600 transition-transform duration-300 group-hover:-translate-x-1 group-hover:text-pink-400">
+                ←
+              </span>
+            </div>
+
+            <div className="mt-6 border-t border-white/5 pt-4">
+              <span className="text-sm font-semibold text-pink-400">
+                تابع التذكيرات والمحتوى القصير →
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+      </ScrollReveal>
+    </div>
+  );
+}
+
