@@ -207,7 +207,7 @@ export default function SurahPage() {
           >
             {ayahs.map((ayah) => (
               <span key={ayah.aya_no}>
-                {(ayah.aya_text ?? "").replace(/\s*[٠-٩]+\s*$/, "")}
+                {(ayah.aya_text ?? "").replace(/[٠-٩]+[\s\u00a0]*$/, "")}
                 <span className="mx-2 inline-flex h-8 w-8 items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-50 text-sm font-sans font-bold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
                   {ayah.aya_no}
                 </span>{" "}
