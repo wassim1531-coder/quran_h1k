@@ -121,7 +121,7 @@ export default function VideoBackground() {
 
   return (
     <>
-      <div className="pointer-events-none fixed inset-0 -z-20 overflow-hidden bg-[#f8faf9] dark:bg-[#020f0c]">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#f8faf9] dark:bg-[#020f0c]">
 
         {/* DARK MODE */}
 

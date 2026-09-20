@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="dark" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="dark light" />
         <script
@@ -46,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-stone-50 text-stone-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-600 selection:text-white">
+      <body className="bg-transparent text-stone-900 dark:bg-transparent dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-600 selection:text-white">
         <SplashScreen />
       <VideoBackground />
         <Navbar />
